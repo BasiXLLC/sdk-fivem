@@ -1,0 +1,33 @@
+name: release
+
+# A tag produces the zip the dashboard hands people.
+#
+# Built here rather than uploaded by hand so the artefact always matches the
+# tag: a release built on somebody's laptop is a release nobody can reproduce,
+# and the one time it differs is the time it matters.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the resource archive
+        run: |
+          # The folder inside the zip is what ends up in resources/, so it
+          # must be named exactly what fxmanifest and `ensure` expect.
+          mkdir -p dist/basix
+          cp -r fxmanifest.lua server client README.md LICENSE dist/basix/
+          cd dist && zip -r ../basix.zip basix
+
+      - name: Publish
+        uses: softprops/action-gh-release@v2
+        with:
+          files: basix.zip
+          generate_release_notes: true
