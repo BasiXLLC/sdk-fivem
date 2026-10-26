@@ -4,14 +4,15 @@ lua54 'yes'
 
 name 'basix'
 author 'BasiX Agency'
-description 'Upload screenshots, clips and logs to BasiX from your server.'
-version '1.0.0'
+description 'Upload screenshots, clips and logs to BasiX, and keep hosted sites player-only.'
+version '1.1.0'
 repository 'https://github.com/basix-agency/basix'
 
 server_scripts {
     'server/http.lua',
     'server/upload.lua',
     'server/logs.lua',
+    'server/sites.lua',
     'server/exports.lua',
     'server/commands.lua',
 }
