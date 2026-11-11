@@ -78,6 +78,14 @@ These scripts can upload to BasiX directly. Step-by-step setup for each one:
 Point your scripts here instead — the endpoints and the response shape are the same.
 See [the comparison](https://basix.agency/compare/fivemanage?utm_source=github&utm_medium=referral&utm_campaign=sdk-fivem) and the migration guides in the integrations docs.
 
+## Further reading
+
+- [FiveM image hosting](https://basix.agency/fivem-image-hosting?utm_source=github&utm_medium=referral&utm_campaign=sdk-fivem): screenshots, phone photos and clips on a CDN
+- [FiveM logs](https://basix.agency/fivem-logs?utm_source=github&utm_medium=referral&utm_campaign=sdk-fivem): searchable server logs with player history and Discord alerts
+- [FiveM database hosting](https://basix.agency/fivem-database-hosting?utm_source=github&utm_medium=referral&utm_campaign=sdk-fivem)
+- [Discord image links expire: the fix for FiveM](https://basix.agency/guides/discord-image-links-expire?utm_source=github&utm_medium=referral&utm_campaign=sdk-fivem)
+- [Imgur uploads not working in FiveM](https://basix.agency/guides/imgur-not-working-fivem?utm_source=github&utm_medium=referral&utm_campaign=sdk-fivem)
+
 ## Convars
 
 | Convar | Default | |
